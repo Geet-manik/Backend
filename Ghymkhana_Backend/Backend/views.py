@@ -5,13 +5,21 @@ from django.shortcuts import get_object_or_404
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
-from .models import meeting,ugSenator,pgSenator,facultyExecutivebodie,studentExecutivebodie
-from .serializers import meetingSerializer,ugSenatorSerializer,pgSenatorSerializer,facultyExcecutiveSerializer,studentExcecutiveSerializer
+from .models import meeting,ugSenator,pgSenator,facultyExecutivebodie,studentExecutivebodie,upcomingEvent
+from .serializers import meetingSerializer,ugSenatorSerializer,pgSenatorSerializer,facultyExcecutiveSerializer,studentExcecutiveSerializer,upComingSerializer
 from rest_framework.decorators import api_view
 # Create your views here.
 
 
 # class meetingList(APIView):
+def home(request):
+    return render(request,'main/home.html')
+def Senate(request):
+    return render(request,'main/Senate.html')
+def minutes(request):
+    return render(request,'main/minutes.html')
+
+
 @api_view(["GET"])
 def getmeeting(request):
         meetings=meeting.objects.all()
@@ -42,3 +50,10 @@ def getstudentExecutivebodie(request):
         studentExecutives=studentExecutivebodie.objects.all()
         serializer=studentExcecutiveSerializer(studentExecutives, many=True)
         return Response(serializer.data)
+
+@api_view(["GET"])
+def getupComing(request):
+        upComings=upcomingEvent.objects.all()
+        serializer=upComingSerializer(upComings, many=True)
+        return Response(serializer.data)
+

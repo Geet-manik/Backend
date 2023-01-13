@@ -44,4 +44,12 @@ class studentExecutivebodie(models.Model):
 
     def _str_(self):
        return self.Position                     
+
+class upcomingEvent(models.Model):
+    Description=models.CharField(max_length=500)
+  
+    Image=models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=100)
+
+    def _str_(self):
+       return self.Position                     
    

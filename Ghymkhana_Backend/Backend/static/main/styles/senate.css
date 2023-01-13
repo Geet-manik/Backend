@@ -1,0 +1,138 @@
+/*--------------card---------------*/
+.carddeck {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.card {
+    width: 18rem;
+    margin: 50px;
+}
+
+.card-body {
+    background-color: #482683;
+}
+
+.card-title {
+    color: rgb(255, 255, 255);
+}
+
+.cardline {
+    background-color: white
+}
+
+.bottomtext {
+    display: flex;
+    justify-content: space-between
+}
+
+.pgtext {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    margin: 50px;
+    font-size: 26px;
+    width: 28%;
+    color: #482683;
+}
+
+.studentext {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    margin: 50px;
+    margin-top: 100px;
+    font-size: 26px;
+    width: 28%;
+}
+
+.btn {
+    -webkit-box-shadow: 0px 0px 2px 1px rgba(153, 153, 153, 1);
+    -moz-box-shadow: 0px 0px 2px 1px rgba(153, 153, 153, 1);
+    box-shadow: 0px 0px 2px 1px rgba(153, 153, 153, 1);
+    width: 30vw;
+}
+
+.studsenate {
+    display: flex;
+    justify-content: space-between;
+}
+
+.descriptionText {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    margin: auto;
+}
+
+.Msgvp {
+    display: flex;
+    justify-content: space-between;
+}
+
+.description {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    margin: 50px;
+    position: relative;
+    bottom: 100px;
+}
+
+.header {
+    margin: 0px 0px 50px 0px;
+    width: 100%;
+}
+
+.headlinks {
+    transform: translateY(-60px);
+    height: 50%;
+}
+
+.toplinks {
+    margin: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+@media (max-width:700px){
+    .carddeck{ 
+        margin-right: 10px;
+        margin-left: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    .card{transform: scale(.7);
+    margin-top: -30px;
+    }
+.pgtext{
+    transform: scale(.75)translateX(-70px)translateY(-40px);
+        width: 250px;
+}
+.studentext{
+    transform: scale(.8)translateX(-70px);
+    width: 300px;
+}
+.description{
+    transform: scale(.8)translateX(-65px)translateY(-40px);
+        width: 250px
+}
+.descriptionText{
+    transform: scale(.8)translateX(-25px);
+    width: 100px;
+    font-size: 3vw;
+      
+    
+}
+
+.btn{transform: scale(.9)translateY(-60px);
+width: 200px;}
+.image{
+    position: relative;
+    right: 30px;
+    display: none;
+}
+}
