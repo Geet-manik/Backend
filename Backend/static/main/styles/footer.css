@@ -1,0 +1,205 @@
+.footer {
+    background-color: #1E2532;
+    color: white;
+    font-family: Raleway;
+    display: flex;
+    padding: 1%;
+    justify-content: space-around;
+    height: 100%;
+    transform: translateY(50px);
+
+}
+
+.logodiv {
+    margin-top: 2%;
+}
+
+.logoimg {
+    width: 142px;
+    height: 142px;
+    position: relative;
+    
+}
+
+.footer-info {
+    display: flex;
+    margin-left: -8%;
+}
+
+.footer-contact {
+    display: block;
+}
+
+.contact {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    margin: 50px 50px 0px 0px;
+    font-size: 26px;
+
+}
+
+.contact-info {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    margin: 10px 50px 0px 0px;
+    font-size: 16px;
+}
+
+.useful-links {
+    display: block;
+    width: 100%;
+}
+
+.useful-text {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    margin: 50px 50px 0px 0px;
+    font-size: 26px;
+}
+
+.somemorelinks {
+    display: block;
+    padding-left: 8%;
+    margin-top: 5.7%;
+    position: relative;
+    top: 10px;
+    
+}
+
+.swc {
+    background-color: #1E2532;
+    display: flex;
+    transform: translateX(200px);
+    width: 50%;
+}
+
+.swclogo {
+    float: left;
+}
+
+.swc-text {
+    color: white;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    margin-left: 10px;
+
+}
+
+.vertical-line {
+    border-left: 2px solid rgb(121, 121, 121);
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.swc-text2 {
+    color: rgb(121, 121, 121);
+    margin-bottom: 0px;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+@media (max-width:1100px){
+   
+    .footer-info{
+        transform: scale(.8);
+    }
+    .logoimg{
+        transform: scale(.9);
+    }
+    .swc{
+        transform: scale(.8);
+    }
+}
+@media (max-width:777px){
+    .footer{
+        max-height: 340px;
+    }
+    .footer-info{transform: scale(.7);position: relative;right: 10px;bottom: 20px;}
+    .swc-text2{white-space: nowrap;}
+    .logoimg{transform: scale(.7);}
+    .swc{transform: scale(.75); }
+   
+}
+@media (max-width:600px){
+   .footer{max-height: 300px;}
+    .footer-info{transform: scale(.6);position: relative;right: 20px;bottom: 20px;}
+    .swc{transform: scale(.7)}
+    .logoimg{transform: scale(.6);position: relative;left: 40px;}
+}
+@media (max-width:470px){
+    .footer{
+        max-height: 240px;
+    }
+    .footer-info{
+        transform: scale(.5);
+        position: relative;
+        right: 0px;
+       bottom: 50px;
+    }
+    .logoimg{transform: scale(.5);
+    position: relative;
+left: 60px;
+top: -20px;}
+.somemorelinks{
+    padding-left: 4%;
+    position: relative;
+    top: 25px;
+}
+.useful-links{
+    margin-right: -20px;
+}
+.swc{transform: scale(.6);}
+}
+@media (max-width:400px){
+    .footer{
+        max-height: 240px;
+    }
+    .footer-info{
+        transform: scale(.5);
+        position: relative;
+        right: 25px;
+       bottom: 50px;
+    }
+    .logoimg{transform: scale(.5);
+        position: relative;
+    left: 95px;
+    top: -20px;}
+}
+@media (max-width:350px){
+    .footer{
+        max-height: 220px;
+    }
+    .footer-info{
+        transform: scale(.45);
+        position: relative;
+        right: 30px;
+       bottom: 50px;
+    }
+    .logoimg{transform: scale(.4);
+        position: relative;
+    left: 110px;
+    top :-40px;}
+    .swc{transform: scale(.55); }
+
+}
+@media (max-width:320px){
+    .footer{
+        max-height: 200px;
+    }
+    .footer-info{
+        transform: scale(.43);
+        position: relative;
+        right: 40px;
+       bottom: 40px;
+    }
+    .logoimg{transform: scale(.38);
+        position: relative;
+    left: 120px;
+    top :-30px;}
+    .swc{transform: scale(.5);position: relative;top: 20px; }
+
+}

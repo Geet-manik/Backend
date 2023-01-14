@@ -1,0 +1,15 @@
+
+.links{
+    display:flex ; justify-content: space-evenly;width: 20%; margin-left: 50px;
+    
+}
+#link1,#link2,#link3{
+    text-decoration:none;color: black;
+}
+
+
+
+    @media (max-width:1000px){
+        .links{transform:translateX(80px)scale(.9);
+    
+    }}
