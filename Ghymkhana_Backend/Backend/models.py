@@ -11,7 +11,7 @@ class ugSenator(models.Model):
     Position=models.CharField(max_length=50)
     Email=models.CharField(max_length=50)
     Phone_No=models.CharField(max_length=10)
-    Image=models.ImageField(upload_to=None, height_field=None, width_field=None, max_length=100)
+    Image=models.ImageField(upload_to="")
 
     def _str_(self):
        return self.Position

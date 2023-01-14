@@ -41,87 +41,41 @@
     <p class="studentext">Students’ executive body</p>
     <p class="pgtext">UG Senators</p>
     <div class="carddeck">
+        {% for data in res2 %}
         <div class="card">
-            <img class="card-img-top" src="{% static 'main/images/IMG20221030155243.jpg' %}" alt="Card image cap">
+            <img class="card-img-top" src="{{data.Image}}"  height="250px" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">{{data.Name}}</h5>
                 <hr style="background-color:white">
                 <div class="bottomtext">
-                    <p class="card-text" style="color: rgb(255, 255, 255);">adfs@iitg.ac.in</p>
-                    <p class="card-text" style="color: rgb(255, 255, 255);">2319048019</p>
+                    <p class="card-text" style="color: rgb(255, 255, 255);">{{data.Email}}</p>
+                    <p class="card-text" style="color: rgb(255, 255, 255);">{{data.Phone_No}}</p>
                 </div>
 
 
             </div>
         </div>
-        <div class="card">
-            <img class="card-img-top" src="{% static 'main/images/IMG20221030155243.jpg' %}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <hr style="background-color:white">
-                <div class="bottomtext">
-                    <p class="card-text" style="color: rgb(255, 255, 255);">adfs@iitg.ac.in</p>
-                    <p class="card-text" style="color: rgb(255, 255, 255);">2319048019</p>
-                </div>
-
-
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src="{% static 'main/images/IMG20221030155243.jpg' %}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <hr style="background-color:white">
-                <div class="bottomtext">
-                    <p class="card-text" style="color: rgb(255, 255, 255);">adfs@iitg.ac.in</p>
-                    <p class="card-text" style="color: rgb(255, 255, 255);">2319048019</p>
-                </div>
-
-
-            </div>
-        </div>
+        {% endfor %}
+       
+        
     </div>
     <p class="pgtext">PG Senators</p>
     <div class="carddeck">
+        {% for data1 in response3 %}
         <div class="card">
-            <img class="card-img-top" src="{% static 'main/images/IMG20221030155243.jpg' %}" alt="Card image cap">
+            <img class="card-img-top" src="{{data1.Image}}"  height="250px" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
+                <h5 class="card-title">{{data1.Name}}</h5>
                 <hr style="background-color:white">
                 <div class="bottomtext">
-                    <p class="card-text" style="color: rgb(255, 255, 255);">adfs@iitg.ac.in</p>
-                    <p class="card-text" style="color: rgb(255, 255, 255);">2319048019</p>
+                    <p class="card-text" style="color: rgb(255, 255, 255);">{{data1.Email}}}</p>
+                    <p class="card-text" style="color: rgb(255, 255, 255);">{{data1.Phone_No}}</p>
                 </div>
 
 
             </div>
         </div>
-        <div class="card">
-            <img class="card-img-top" src="{% static 'main/images/IMG20221030155243.jpg' %}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <hr style="background-color:white">
-                <div class="bottomtext">
-                    <p class="card-text" style="color: rgb(255, 255, 255);">adfs@iitg.ac.in</p>
-                    <p class="card-text" style="color: rgb(255, 255, 255);">2319048019</p>
-                </div>
-
-
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src="{% static 'main/images/IMG20221030155243.jpg' %}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <hr style="background-color:white">
-                <div class="bottomtext">
-                    <p class="card-text" style="color: rgb(255, 255, 255);">adfs@iitg.ac.in</p>
-                    <p class="card-text" style="color: rgb(255, 255, 255);">2319048019</p>
-                </div>
-
-
-            </div>
-        </div>
+        {% endfor %}
     </div>
 
     {% include './components/footer.html'%}

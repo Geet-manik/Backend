@@ -1,5 +1,5 @@
 from django.shortcuts import render
- 
+import requests
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404
 from rest_framework.response import Response
@@ -13,11 +13,22 @@ from rest_framework.decorators import api_view
 
 # class meetingList(APIView):
 def home(request):
-    return render(request,'main/home.html')
+    response= requests.get('http://127.0.0.1:8001/faculty/?format=json').json()
+    response1 =requests.get('http://127.0.0.1:8001/student/?format=json').json()
+    return render(request,'main/home.html',{'response':response,'response1':response1})
+    
+
+
+
 def Senate(request):
-    return render(request,'main/Senate.html')
+    res2=requests.get('http://127.0.0.1:8001/ugsenator/?format=json').json()
+    response3=requests.get('http://127.0.0.1:8001/pgsenator/?format=json').json()
+    return render(request,'main/Senate.html',{'res2':res2,'response3':response3})
+
+
 def minutes(request):
-    return render(request,'main/minutes.html')
+    res3=requests.get('http://127.0.0.1:8001/meeting/?format=json').json()
+    return render(request,'main/minutes.html',{'res3':res3})
 
 
 @api_view(["GET"])
