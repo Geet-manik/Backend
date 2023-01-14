@@ -1,0 +1,142 @@
+.header{
+    margin: 10px 0px 0px 0px; width: 100%;
+}
+.homeImage{
+    width:99vw; height: 98%;
+}
+.homeabout{
+    display:flex ;
+}
+.aboutHead{
+    font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 700;margin:50px ; font-size: 26px; width: 28%;
+}
+.aboutInfo{
+    width:50% ;margin:50px
+}
+.listtext{
+    margin:35px;
+}
+.aboutImage{
+    transform:translateY(-20px);
+    height: 50vh;
+    
+}
+.upcomingeventsText{
+    font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 700;margin:50px ; font-size: 26px; width: 28%;
+}
+.gymkhanaCouncilText{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;margin: 0px 50px 50px 50px ; font-size: 26px; width: 28%; 
+}
+.FacultyText{
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;margin:50px ; font-size: 26px; width: 28%; color: #482683;
+}
+
+/*--------------card---------------*/
+.carddeck{
+    display: flex; justify-content:space-between; flex-wrap: wrap;margin-left:100px; margin-right: 100px;
+}
+.card{
+    width: 18rem; margin: 50px;
+}
+.card-body{
+    background-color: #482683;
+}
+.card-title{
+    color: rgb(255, 255, 255);
+}
+.cardline{
+    background-color:white
+}
+.bottomtext{
+    display: flex; justify-content:space-between
+}
+
+
+@media (max-width:1000px){
+    .aboutImage{transform: scale(.7);
+    position: relative;
+left: 50px;}
+}
+
+@media (max-width:700px){
+    
+    
+     .aboutImage{
+       transform: scale(.7);
+       position: relative;
+       left: 180px;
+       
+
+    }
+  
+    .aboutInfo{
+        width: 100%;
+         margin: 10px;
+         position: relative;
+         top: 20px;
+    } 
+    .aboutHead{
+        font-size: 26px;
+        width:100%;
+        margin: 10px;
+      }
+    .listtext{
+        margin: 10px;
+        position: relative;
+        top: 30px;
+    }
+    .homeabout{transform: scale(.8)translateX(-45px);}
+    .upcomingeventsText{
+        transform: scale(.8)translateX(-45px);
+    }
+    .gymkhanaCouncilText{
+        transform: scale(.8)translateX(-70px);
+        width: 300px;
+    }
+    .FacultyText{
+        transform: scale(.75)translateX(-70px)translateY(-40px);
+        width: 250px;
+    }
+    .carddeck{ 
+        margin-right: 10px;
+        margin-left: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    .card{transform: scale(.7);
+    margin-top: -30px;
+    }
+
+                                                                                                                                                                                                   
+}
+
+@media (max-width:500px){
+    .aboutImage{
+        transform: scale(.6);
+        position: relative;
+        left: 0px;
+    }
+
+ .aboutHead{
+    width: 35vh;
+ }
+}
+@media (max-width:400px){
+    .aboutHead{transform: scale(.9);}
+    .aboutInfo{
+        transform: scale(.9);
+    }
+    .aboutImage{
+        transform: scale(.5);
+        position: relative;
+        left: -40px;
+    }
+}

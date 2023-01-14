@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'main/styles/minutes.css' %}">
+    <title>Minutes</title>
+</head>
+<body>
+    <div class="header">{% include './components/header.html'%}</div>
+<div class="headlinks" >{% include './components/headlinks.html'%}</div>
+<p class="minutes">Minutes from Senate meetings</p>
+<p class="desc">Description of students senate council</p>
+<div class="table-responsive">
+<table class="table">
+    <thead class="thead" >
+      <tr>
+        <th scope="col">Minutes No.</th>
+        <th scope="col">Subject</th>
+        <th scope="col">Format</th>
+        <th scope="col">Date</th>
+      </tr>
+    </thead>
+    <tbody >
+      {% for data3 in res3 %}
+
+      <tr>
+        <th scope="row">{{data3.Serial}}</th>
+        <td>{{data3.Subject}}</td>
+        <td>{{data3.Format}}</td>
+        <td>{{data3.Date}}</td>
+      </tr>
+      {% endfor %}
+    
+    </tbody>
+  </table>
+  
+  </div>
+  {% include './components/footer.html'%}
+</body>
+</html>

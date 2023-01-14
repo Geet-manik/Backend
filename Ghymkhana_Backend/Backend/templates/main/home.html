@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'main/styles/home.css' %}">
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="header">{% include './components/header.html'%}</div>
+    <img class="homeImage" src="{% static 'main/images/Screenshot from 2022-12-12 23-21-56.png' %}" alt="">
+    {% include './components/headlinks.html'%}
+    <div class="homeabout">
+        <div class="abouttext">
+            <p class="aboutHead">Welcome to The Students Senate Council, IIT
+                Guwahati</p>
+            <p class="aboutInfo">Students Gymkhana Council is the body that promotes the objectives of
+                fostering extra-curricular, co-curricular activities, welfare of students, and their stay in the campus.
+                It comprises of 5 boards:
+            <ul class="listtext">
+                <li>Technical Board</li>
+                <li>Sports Board</li>
+                <li>Welfare Board</li>
+                <li>Cultural Board</li>
+                <li>HAB</li>
+
+            </ul>
+            </p>
+        </div>
+        <img class="aboutImage" src="{% static 'main/images/aboutimage.png' %}" alt="">
+    </div>
+    <div class="upcomingEvents">
+        <p class="upcomingeventsText">Upcoming Events</p>
+    </div>
+
+
+    <div>
+        <p class="gymkhanaCouncilText">Gymkhana Executive Council</p>
+        <p class="FacultyText">Faculty executive body</p>
+
+
+
+        <div class="carddeck">
+
+            {% for info in response %}
+
+            <div class="card">
+                <img class="card-img-top" src="{{info.Image}}"  height="250rem" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{info.Name}}</h5>
+                    <hr class="cardline">
+                    <div class="bottomtext">
+                        <p class="card-text" style="color: rgb(255, 255, 255);">{{info.Email}}</p>
+                        <p class="card-text" style="color: rgb(255, 255, 255);">{{info.Phone_No}}</p>
+                    </div>
+
+
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+
+
+        <p class="FacultyText">Students’ executive body</p>
+        <div class="carddeck">
+            {% for res in response1 %}
+            <div class="card">
+                <img class="card-img-top" src="{{res.Image}}" height="250rem" alt="Card image cap">
+                <div class="card-body" style="background-color: #482683;">
+                    <h5 class="card-title" style="color: rgb(255, 255, 255);">{{res.Name}}</h5>
+                    <hr style="background-color:white">
+                    <div class="bottomtext">
+                        <p class="card-text" style="color: rgb(255, 255, 255);">{{res.Email}}</p>
+                        <p class="card-text" style="color: rgb(255, 255, 255);">{{res.Phone_No}}</p>
+                    </div>
+
+
+                </div>
+               
+
+            </div>
+            {% endfor %}
+           
+            
+        </div>
+    </div>
+    {% include './components/footer.html'%}
+
+</body>
+
+</html>

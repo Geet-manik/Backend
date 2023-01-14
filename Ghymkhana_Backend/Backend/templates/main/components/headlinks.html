@@ -1,0 +1,51 @@
+
+{% load static %}
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+<link rel="stylesheet" href="{% static 'main/styles/headlinks.css' %}">
+<div class="links" >
+    <p style="font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;margin:50px ; font-size: 16px; width: 28%;"><a id="link1"  href="{% url 'home-page' %} " >Home</a></p>
+    <p style="font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;margin:50px ; font-size: 16px; width: 28%;"><a id="link2"href="{% url 'senate-page' %}">Senate</a></p>
+    <p style="font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 700;margin:50px ; font-size: 16px; width: 28%;"><a id="link3"href="{% url 'minutes-page' %}">Minutes</a> </p>
+</div>
+
+<script>
+
+
+
+$(document).ready(function () {
+  $("a").click(function () {
+    var getID = this.id;
+    console.log(getID);
+    
+    if(getID=="link1"){
+    console.log("link1 was pressed");
+   document.getElementById("link1").style.color='#482683';
+
+   document.getElementById("link2").style.color='black';
+   document.getElementById("link3").style.color='black';
+  }
+ else if(getID=="link2"){
+    console.log("link2 was pressed");
+    document.getElementById("link2").style.color='#482683';
+document.getElementById("link1").style.color='black';
+document.getElementById("link3").style.color='black';
+  }
+ else if(getID=="link3"){
+    console.log("link3 was pressed");
+    document.getElementById("link3").style.color='#482683';
+   document.getElementById("link2").style.color='black';
+   document.getElementById("link1").style.color='black';
+  }
+  });
+
+  
+});
+</script>

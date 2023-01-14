@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'main/styles/senate.css' %}">
+
+    <title>Senate</title>
+</head>
+
+<body>
+    <div class="header">{% include './components/header.html'%}</div>
+    <div class="headlinks">{% include './components/headlinks.html'%}</div>
+
+    <p class="studentext" style="position:relative;bottom: 100px;">Welcome to The Students Senate Council, IIT Guwahati
+    </p>
+    <p class="description">Description of students senate council</p>
+    <div class="toplinks">
+        <button class="btn btn-light ">
+            <div class="studsenate">
+                <p class="descriptionText">Power of students senate </p><img
+                    src="{% static 'main/images/Arrow - Right Square.svg' %}" class="image" alt="img">
+            </div>
+        </button>
+        <button class="btn btn-light">
+            <div class="Msgvp ">
+                <p class="descriptionText">Message from Vice President </p><img
+                    src="{% static 'main/images/Arrow - Right Square.svg' %}" class="image" alt="">
+            </div>
+        </button>
+
+    </div>
+
+    <p class="studentext">Students’ executive body</p>
+    <p class="pgtext">UG Senators</p>
+    <div class="carddeck">
+        {% for data in res2 %}
+        <div class="card">
+            <img class="card-img-top" src="{{data.Image}}"  height="250px" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{data.Name}}</h5>
+                <hr style="background-color:white">
+                <div class="bottomtext">
+                    <p class="card-text" style="color: rgb(255, 255, 255);">{{data.Email}}</p>
+                    <p class="card-text" style="color: rgb(255, 255, 255);">{{data.Phone_No}}</p>
+                </div>
+
+
+            </div>
+        </div>
+        {% endfor %}
+       
+        
+    </div>
+    <p class="pgtext">PG Senators</p>
+    <div class="carddeck">
+        {% for data1 in response3 %}
+        <div class="card">
+            <img class="card-img-top" src="{{data1.Image}}"  height="250px" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{data1.Name}}</h5>
+                <hr style="background-color:white">
+                <div class="bottomtext">
+                    <p class="card-text" style="color: rgb(255, 255, 255);">{{data1.Email}}}</p>
+                    <p class="card-text" style="color: rgb(255, 255, 255);">{{data1.Phone_No}}</p>
+                </div>
+
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% include './components/footer.html'%}
+
+
+
+</body>
+
+</html>
